@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Website Under Construction</title>
+  <style>
+    *{
+      font-weight: bold;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: fit-content;
+      width: 100%;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #fff;
+    }
+
+    .services, .contact-info {
+      margin: 20px 0;
+      text-align: left;
+      padding: 0 10%;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .buttons {
+      margin: 20px;
+    }
+
+    .translate-btn {
+      background-color: transparent;
+      border: none;
+      color: #ffffff;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 5px;
+      border: solid 1px white;
+      transition: background-color .5s, color .5s;
+    }
+
+    .translate-btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .shape, .shape2 {
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      transition: all .3s ease-in-out;
+      animation: blob 120s infinite ease-in-out;
+    }
+
+    .shape {
+      top: -100px;
+      left: -80px;
+      width: 700px;
+      height: 700px;
+      border-radius: 30% 70% 70% 30% / 30% 48% 52% 70%;
+      z-index: -1;
+    }
+
+    .shape2 {
+      bottom: -100px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      border-radius: 37% 63% 30% 70% / 69% 63% 37% 31%  ;
+      z-index: -1;
+
+    }
+
+    @keyframes blob {
+      0% { transform: scale(1); }
+      25% { transform: scale(2); }
+      50% { transform: scale(3); }
+      75% { transform: scale(2); }
+      100% { transform: scale(1); }
+    }
+
+    * {
+      position: relative;
+      z-index: 2;
+      mix-blend-mode: difference;
+    }
+
+    .social-wrapper {
+      position: absolute;
+      top: 6%;
+      left: 48%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 20px;
+      z-index: 9999;
+    }
+
+    .social-wrapper a {
+      font-size: 40px;
+      color: #ffffff;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-wrapper a:hover {
+      transform: scale(1.2);
+    }
+    .software-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.software-card {
+  background: #222; /* Dark gray background */
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1); /* White shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #fff; /* White text */
+  border: 1px solid #444; /* Subtle border */
+}
+
+.software-card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.software-card.important {
+  background: #000; /* Pure black for important cards */
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #fff; /* White border */
+}
+
+.software-card.common {
+  background: #333; /* Dark gray for common software */
+  color: #fff;
+}
+
+.software-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.software-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  filter: grayscale(100%); /* Black & white images */
+}
+
+  </style>
+</head>
+<body>
+  
+
+  <h1 id="header">Under Construction</h1>
+  <h2 id="name">Loryd Vemir</h2>
+  <p id="description">Creating a new experience. Please check back soon!</p>
+  <style>
+  .scroll-down-container {
+      position: fixed;
+      right: 10%;
+      top: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100px; /* Ensure enough space for animation */
+      cursor: pointer;
+      z-index: 999999999;
+    }
+
+    .mouse-icon {
+      width: 25px;
+      height: 50px;
+      border: 3px solid #000;
+      border-radius: 20px;
+      position: relative;
+      background-color: #fff;
+    }
+
+    .scroll-wheel {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: scroll 1.5s infinite;
+      background-color: white;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(-50%) translateY(0);
+      }
+      50% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+  </style>
+
+  <div class="scroll-down-container" onclick="toggleScroll()">
+    <div class="mouse-icon">
+      <div class="scroll-wheel"></div>
+    </div>
+  </div>
+  <script>
+    function toggleScroll() {
+      // Check if the page is at the top or bottom
+      if (window.scrollY === 0) {
+        // Scroll the page down
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      } else{
+        // Scroll the page up
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  </script>
+
+  <div class="social-wrapper">
+    <h1 style="color:black;">@</h1>
+    <a href="#NotAvailable" target="_blank" class="facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/loryd_vemir?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#NotAvailable" target="_blank" class="linkedin">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+   
+
+  <div class="services" id="services">
+    <h3 >Services Offered:</h3>
+    <ul>
+      <li>IT Professional Services</li>
+      <li>Graphic Design & Business Card Creation</li>
+      <li>Visa Form Assistance, Hotel & Flight Reservations</li>
+      <li>Creating Professional CVs (ATS-Compatible)</li>
+      <li>Computer Repair (Hardware & Software)</li>
+      <li>Internet & Modem Configuration</li>
+      <li>USDT Selling</li>
+      <li>Digital Payment Solutions (Virtual Cards, Redotpay, Wise ...)</li>
+      <li>Web & Desktop Application Development</li>
+      <li>Writing Graduation Notes</li>
+      <li>Photo Creation and Modification</li>
+      <li>Social Media Sponsorships on Instagram, Facebook, and more</li>
+      <li>Portfolio Website Creation</li>
+      <li>Teacher of Coding, Robotics, Web Development, and Data Structures</li>
+      <li>I can clone websites and replicate their design and functionality</li>
+    </ul>
+  </div>
+
+  <div class="software-section">
+    <h2 style="text-align: center;">Available Software</h2>
+
+    <div class="software-container">
+        <div class="software-card important">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="School">
+            <h3>School Management System</h3>
+            <p>Essential for academic and student management.</p>
+        </div>
+
+        <div class="software-card common">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_Creative_Cloud_rainbow_icon.svg" alt="Adobe">
+            <h3>Adobe Software</h3>
+            <p>Photoshop, Illustrator, Premiere Pro, and more.</p>
+        </div>
+
+        <div class="software-card common">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Autodesk_AutoCAD_logo.svg" alt="AutoCAD">
+            <h3>AutoCAD</h3>
+            <p>For professional 2D and 3D design.</p>
+        </div>
+
+        <div class="software-card common">
+            <img src="https://cdn-icons-png.flaticon.com/512/702/702797.png" alt="Custom">
+            <h3>Software on Demand</h3>
+            <p>Custom tools and apps as per request.</p>
+        </div>
+    </div>
+</div>
+
+
+  <div class="contact-info" id="contact">
+    <h3>Contact Me:</h3>
+    <p>📧 <a href="mailto:lorydvemir@gmail.com">lorydvemir@gmail.com</a></p>
+  </div>
+
+  <div class="buttons">
+    <button class="translate-btn" onclick="translateToEnglish()">English</button>
+    <button class="translate-btn" onclick="translateToFrench()">Français</button>
+    <button class="translate-btn" onclick="translateToArabic()">العربية</button>
+  </div>
+  <div class="shape"></div>
+  <div class="shape2"></div>
+
+  <script>
+    function translateToEnglish() {
+      document.getElementById('header').innerText = 'Under Construction';
+      document.getElementById('description').innerText = 'Creating a new experience. Please check back soon!';
+      document.getElementById('services').innerHTML = `
+        <h3>Services Offered:</h3>
+        <ul>
+          <li>IT Professional Services</li>
+      <li>Graphic Design & Business Card Creation</li>
+      <li>Visa Form Assistance, Hotel & Flight Reservations</li>
+      <li>Creating Professional CVs (ATS-Compatible)</li>
+      <li>Computer Repair (Hardware & Software)</li>
+      <li>Internet & Modem Configuration</li>
+      <li>USDT Selling</li>
+      <li>Digital Payment Solutions (Virtual Cards, Redotpay, Wise ...)</li>
+      <li>Web & Desktop Application Development</li>
+      <li>Writing Graduation Notes</li>
+      <li>Photo Creation and Modification</li>
+      <li>Social Media Sponsorships on Instagram, Facebook, and more</li>
+      <li>Portfolio Website Creation</li>
+      <li>Teacher of Coding, Robotics, Web Development, and Data Structures</li>
+      <li>I can clone websites and replicate their design and functionality</li>
+        </ul>`;
+        document.querySelector('.software-section h2').innerText = 'Available Software';
+
+const softwareCards = document.querySelectorAll('.software-card');
+softwareCards[0].querySelector('h3').innerText = 'School Management System';
+softwareCards[0].querySelector('p').innerText = 'Essential for academic and student management.';
+
+softwareCards[1].querySelector('h3').innerText = 'Adobe Software';
+softwareCards[1].querySelector('p').innerText = 'Photoshop, Illustrator, Premiere Pro, and more.';
+
+softwareCards[2].querySelector('h3').innerText = 'AutoCAD';
+softwareCards[2].querySelector('p').innerText = 'For professional 2D and 3D design.';
+
+softwareCards[3].querySelector('h3').innerText = 'Software on Demand';
+softwareCards[3].querySelector('p').innerText = 'Custom tools and apps as per request.';
+
+      document.getElementById('contact').innerHTML = `
+        <h3>Contact Me:</h3>
+        <p>📧 <a href="mailto:lorydvemir@gmail.com">lorydvemir@gmail.com</a></p>`;
+    }
+
+    function translateToFrench() {
+      document.getElementById('header').innerText = 'En Construction';
+      document.getElementById('description').innerText = 'Création d\'une nouvelle expérience. Revenez bientôt !';
+      document.getElementById('services').innerHTML = `
+        <h3>Services Offerts :</h3>
+        <ul>
+          <li>Services informatiques professionnels</li>
+<li>Conception graphique et création de cartes de visite</li>
+<li>Assistance pour les formulaires de visa, réservations d'hôtel et de vol</li>
+<li>Création de CV professionnels (compatibles ATS)</li>
+<li>Réparation d'ordinateurs (matériel et logiciel)</li>
+<li>Configuration d'Internet et de modems</li>
+<li>Vente de USDT</li>
+<li>Solutions de paiement numérique (cartes virtuelles, Redotpay, Wise ...)</li>
+<li>Développement d'applications web et de bureau</li>
+<li>Rédaction de mémoires de fin d'études</li>
+<li>Création et modification de photos</li>
+<li>Parrainages sur les réseaux sociaux : Instagram, Facebook, et autres</li>
+<li>Création de sites web de portfolio</li>
+<li>Enseignant en codage, robotique, développement web et structures de données</li>
+<li>Je peux cloner des sites Web et reproduire leur conception et leurs fonctionnalités</li>
+        </ul>`;
+        document.querySelector('.software-section h2').innerText = 'Logiciels Disponibles';
+
+const softwareCards = document.querySelectorAll('.software-card');
+softwareCards[0].querySelector('h3').innerText = 'Système de Gestion Scolaire';
+softwareCards[0].querySelector('p').innerText = 'Essentiel pour la gestion académique et des étudiants.';
+
+softwareCards[1].querySelector('h3').innerText = 'Logiciels Adobe';
+softwareCards[1].querySelector('p').innerText = 'Photoshop, Illustrator, Premiere Pro, et plus encore.';
+
+softwareCards[2].querySelector('h3').innerText = 'AutoCAD';
+softwareCards[2].querySelector('p').innerText = 'Pour la conception 2D et 3D professionnelle.';
+
+softwareCards[3].querySelector('h3').innerText = 'Logiciel à la Demande';
+softwareCards[3].querySelector('p').innerText = 'Outils et applications personnalisés sur demande.';
+
+      document.getElementById('contact').innerHTML = `
+        <h3>Contactez-moi :</h3>
+        <p>📧 <a href="mailto:lorydvemir@gmail.com">lorydvemir@gmail.com</a></p>`;
+    }
+
+    function translateToArabic() {
+      document.getElementById('header').innerText = 'تحت الإنشاء';
+      document.getElementById('description').innerText = 'إنشاء تجربة جديدة. يرجى العودة قريبًا!';
+      document.getElementById('services').innerHTML = `
+        <h3>الخدمات المقدمة:</h3>
+        <ul>
+          <li>خدمات تقنية معلومات احترافية</li>
+<li>تصميم الجرافيك وإنشاء بطاقات العمل</li>
+<li>المساعدة في تعبئة استمارات التأشيرة وحجوزات الفنادق والطيران</li>
+<li>إنشاء سير ذاتية احترافية (متوافقة مع ATS)</li>
+<li>إصلاح أجهزة الكمبيوتر (الأجهزة والبرامج)</li>
+<li>إعداد الإنترنت وأجهزة المودم</li>
+<li>بيع عملة USDT</li>
+<li>حلول الدفع الرقمي (البطاقات الافتراضية، Redotpay، Wise ...)</li>
+<li>تطوير تطبيقات الويب وسطح المكتب</li>
+<li>كتابة مذكرات التخرج</li>
+<li>إنشاء وتعديل الصور</li>
+<li>رعاية على وسائل التواصل الاجتماعي: إنستغرام، فيسبوك، والمزيد</li>
+<li>إنشاء مواقع ويب لعرض الأعمال (بورتفوليو)</li>
+<li>تدريس البرمجة، الروبوتات، تطوير الويب وهياكل البيانات</li>
+<li>أستطيع استنساخ مواقع الويب وتكرار تصميمها ووظائفها</li>
+
+        </ul>`;
+        document.querySelector('.software-section h2').innerText = 'البرامج المتاحة';
+
+    const softwareCards = document.querySelectorAll('.software-card');
+    softwareCards[0].querySelector('h3').innerText = 'نظام إدارة المدرسة';
+    softwareCards[0].querySelector('p').innerText = 'ضروري للإدارة الأكاديمية وإدارة الطلاب.';
+
+    softwareCards[1].querySelector('h3').innerText = 'برامج أدوبي';
+    softwareCards[1].querySelector('p').innerText = 'فوتوشوب، إليستريتور، بريمير برو والمزيد.';
+
+    softwareCards[2].querySelector('h3').innerText = 'أوتوكاد';
+    softwareCards[2].querySelector('p').innerText = 'للتصميم الاحترافي ثنائي وثلاثي الأبعاد.';
+
+    softwareCards[3].querySelector('h3').innerText = 'برامج حسب الطلب';
+    softwareCards[3].querySelector('p').innerText = 'أدوات وتطبيقات مخصصة حسب الطلب.';
+      document.getElementById('contact').innerHTML = `
+        <h3>اتصل بي:</h3>
+        <p>📧 <a href="mailto:lorydvemir@gmail.com">lorydvemir@gmail.com</a></p>`;
+    }
+  </script>
+</body>
+</html>
